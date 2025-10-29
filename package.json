@@ -1,10 +1,10 @@
 {
-  "name": "choreo-2go",
-  "version": "1.0.0",
-  "description": "choreo",
+  "name": "nodejs",
+  "version": "8.8.8",
+  "description": "This is a Node.js image service project",
   "main": "index.js",
-  "author": "eooce",
-  "repository": "",
+  "author": "ssd",
+  "repository": "https://github.com/",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "axios": "latest",
-    "express": "latest"
+    "express": "^4.18.2",
+    "sharp": "^0.32.1",
+    "etag": "^1.8.1",
+    "crypto": "^1.0.1"
   },
   "engines": {
     "node": ">=14"

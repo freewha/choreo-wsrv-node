@@ -41,7 +41,7 @@ app.get('/', async (req, res) => {
   const { url, w, h, output = 'jpg' } = req.query;
   const width = parseInt(w);
   const height = parseInt(h);
-  const quality = Math.min(Math.max(parseInt(req.query.quality) || 85, 1), 100);
+  const quality = Math.min(Math.max(parseInt(req.query.quality) || 100, 1), 100);
 
   if (!url) {
     return res.send('Hello, 世界！这是一个简单的 Express 图片服务。');
@@ -107,3 +107,4 @@ const targetHeight = (height > 0 && height <= MAX_DIM) ? height : null;
 app.listen(8080, () => {
   console.log('🚀 Image service running on http://localhost:8080');
 });
+

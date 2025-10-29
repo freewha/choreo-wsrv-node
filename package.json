@@ -14,8 +14,7 @@
     "axios": "latest",
     "express": "^4.18.2",
     "sharp": "^0.32.1",
-    "etag": "^1.8.1",
-    "crypto": "^1.0.1"
+    "etag": "^1.8.1"
   },
   "engines": {
     "node": ">=14"

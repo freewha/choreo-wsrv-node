@@ -44,7 +44,7 @@ app.get('/', async (req, res) => {
   const quality = Math.min(Math.max(parseInt(req.query.quality) || 100, 1), 100);
 
   if (!url) {
-    return res.send('Hello, 世界！这是一个简单的 Express 图片服务。');
+    return res.send('Hello, 世界。');
   }
 
 
@@ -75,7 +75,6 @@ const targetHeight = (height > 0 && height <= MAX_DIM) ? height : null;
   // 构建 sharp 转换流
   let transformer = sharp()
     .rotate(); // 自动根据 EXIF 旋转
- console.log(targetWidth, targetHeight);
   if (targetWidth && targetHeight) {
     transformer = transformer.resize(targetWidth, targetHeight, { fit: 'cover' });
   } else if (targetWidth || targetHeight) {
@@ -107,4 +106,5 @@ const targetHeight = (height > 0 && height <= MAX_DIM) ? height : null;
 app.listen(8080, () => {
   console.log('🚀 Image service running on http://localhost:8080');
 });
+
 

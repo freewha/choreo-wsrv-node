@@ -6,7 +6,6 @@ const crypto = require('crypto');
 
 const app = express();
 const MAX_DIM = 2000;
-
 app.use(express.json());
 
 // CORS 中间件
@@ -103,8 +102,10 @@ const targetHeight = (height > 0 && height <= MAX_DIM) ? height : null;
   imageStream.pipe(transformer).pipe(res);
 });
 
-app.listen(8080, () => {
-  console.log('🚀 Image service running on http://localhost:8080');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 
